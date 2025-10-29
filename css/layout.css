@@ -1,0 +1,214 @@
+/* ==============================
+   RESET E BASE
+============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+/* Aumenta o contraste de foco e teclado */
+:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 2px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+section {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  section {
+    grid-column: span 6;
+  }
+}
+
+/* ==============================
+   CABEÇALHO E RODAPÉ
+============================== */
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+
+.footer {
+  justify-content: center;
+}
+
+main {
+  margin-bottom: var(--space-5);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ==============================
+   MENU HAMBÚRGUER
+============================== */
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.hamburger:focus,
+.main-nav a:focus {
+  outline: 3px solid #ffcc00;
+}
+
+/* Navegação */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: var(--space-2);
+  border-radius: 0 0 8px 8px;
+}
+
+.main-nav.open {
+  display: flex;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: var(--space-1) 0;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Layout desktop */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: var(--space-3);
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* ==============================
+   LINK "PULAR PARA O CONTEÚDO"
+============================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==============================
+   MODO ESCURO AUTOMÁTICO (sistema)
+============================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  .header,
+  .footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  .main-nav a {
+    color: #fff;
+  }
+
+  .main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ==============================
+   MODO ALTO CONTRASTE MANUAL
+============================== */
+.alto-contraste body,
+body.alto-contraste {
+  background-color: #000 !important;
+  color: #ff0 !important;
+}
+
+body.alto-contraste .header,
+body.alto-contraste .footer {
+  background-color: #000 !important;
+  color: #ff0 !important;
+}
+
+body.alto-contraste a {
+  color: #0ff !important;
+  text-decoration: underline;
+}
+
+body.alto-contraste .hamburger {
+  color: #ff0 !important;
+}
+
+body.alto-contraste .main-nav {
+  background-color: #000 !important;
+}

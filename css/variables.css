@@ -1,0 +1,27 @@
+/* css/variables.css */
+:root {
+  /* Cores */
+  --color-primary: #FF6B00;
+  --color-primary-light: #FF8C42;
+  --color-secondary: #0057D9;
+  --color-secondary-light: #4D8CFF;
+  --color-white: #FFFFFF;
+  --color-gray: #CCCCCC;
+  --color-dark: #333333;
+  --color-black: #000000;
+
+  /* Tipografia */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2.5rem;
+
+  /* Espaçamentos */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}

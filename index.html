@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONG Patinhas</title>
+
+  <!-- Metadados de acessibilidade -->
+  <meta name="description" content="ONG Patinhas - resgate e adoção de animais. Conheça nossos projetos e seja voluntário.">
+  <meta name="theme-color" content="#ff914d">
+
+  <!-- Links de estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Ícone do site -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Link para pular direto para o conteúdo principal -->
+  <a class="skip-link" href="#app">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho -->
+  <header class="header" role="banner">
+    <h1 class="logo">ONG <span>Patinhas</span></h1>
+
+    <!-- Botão do menu acessível -->
+    <button 
+      class="hamburger" 
+      aria-label="Abrir menu de navegação"
+      aria-controls="menu-principal"
+      aria-expanded="false"
+      onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- Navegação principal -->
+    <nav id="menu-principal" class="main-nav" role="navigation">
+      <ul>
+        <li><a href="/" data-link>Início</a></li>
+        <li><a href="/projetos" data-link>Nossos Projetos</a></li>
+        <li><a href="/cadastro" data-link>Seja Voluntário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="app" class="container" role="main" tabindex="0">
+    <!-- O conteúdo das páginas é carregado aqui dinamicamente -->
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer" role="contentinfo">
+    <p>&copy; <span id="ano-atual"></span> ONG Patinhas — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script type="module" src="js/main.js"></script>
+  <script>
+    // Atualiza automaticamente o ano no rodapé
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

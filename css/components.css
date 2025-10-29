@@ -1,0 +1,33 @@
+/* Campos do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-white);
+  border-radius: 8px;
+  border: 1px solid var(--color-gray);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  font-size: var(--font-sm);
+  margin-bottom: 4px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  font-size: var(--font-md);
+  transition: border-color 0.3s;
+}
+
+/* Estados de foco */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 4px rgba(0, 87, 217, 0.3);
+}
