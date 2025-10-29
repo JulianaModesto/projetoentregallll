@@ -6,7 +6,7 @@
 Bem-vindo ao site da **ONG Patinhas**!  
 Aqui você vai conhecer nossos projetos, formas de ajudar e como se tornar um voluntário (simulados para fins acadêmicos). Criamos este site pensando em ser **claro, acessível e fácil de navegar** para qualquer pessoa.
 
-<img width="600" height="411" alt="image" src="https://github.com/user-attachments/assets/3a4a8eec-7a0e-4421-adab-2ecad4d34812" />
+https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=1200&q=80
 
 ---
 
